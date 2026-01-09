@@ -18,13 +18,66 @@
         <i class="ri-emotion-laugh-line"></i>
       </div>
 
-      <h1>Random Joke</h1>
+      <h1>Random Joke Generator</h1>
+      
+      <div class="category-filter">
+        <select id="categorySelect">
+          <option value="all">All Jokes</option>
+          <option value="programming">Programming</option>
+          <option value="puns">Puns</option>
+          <option value="dad">Dad Jokes</option>
+        </select>
+      </div>
 
       <p class="joke" id="joke">
         Click the button below. I promise mild amusement.
       </p>
+      
+      <div class="joke-category">
+        <span id="currentCategory">Category: All</span>
+      </div>
 
-      <button id="jokeBtn">Tell me a joke</button>
+      <div class="rating-container" id="ratingContainer">
+        <p>Rate this joke:</p>
+        <div class="stars">
+          <i class="ri-star-line" data-rating="1"></i>
+          <i class="ri-star-line" data-rating="2"></i>
+          <i class="ri-star-line" data-rating="3"></i>
+          <i class="ri-star-line" data-rating="4"></i>
+          <i class="ri-star-line" data-rating="5"></i>
+        </div>
+        <p class="rating-text" id="ratingText">Not rated yet</p>
+      </div>
+
+      <div class="action-buttons">
+        <button id="jokeBtn">Tell me a joke</button>
+        <button id="favoriteBtn" class="secondary-btn">
+          <i class="ri-heart-line"></i> Add to Favorites
+        </button>
+        <button id="shareBtn" class="secondary-btn">
+          <i class="ri-share-line"></i> Share Joke
+        </button>
+        <button id="viewFavoritesBtn" class="secondary-btn">
+          <i class="ri-bookmark-line"></i> View Favorites
+        </button>
+      </div>
+      
+      <div class="modal" id="favoritesModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Favorite Jokes</h2>
+            <button class="close-modal" id="closeModalBtn">&times;</button>
+          </div>
+          <div class="modal-body">
+            <ul id="favoritesList">
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="notification" id="shareNotification">
+        Joke link copied to clipboard!
+      </div>
     </div>
   </main>
 

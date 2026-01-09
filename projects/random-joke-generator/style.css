@@ -1,73 +1,289 @@
 * {
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  }
-  
-  body {
-    margin: 0;
-    height: 100vh;
-    background: #0f172a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #e5e7eb;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 360px;
-    padding: 1rem;
-  }
-  
-  .joke-card {
-    background: #020617;
-    border-radius: 18px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
-  }
-  
-  .icon {
-    font-size: 2.8rem;
-    color: #a5b4fc;
-    margin-bottom: 0.5rem;
-  }
-  
-  h1 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: #38bdf8;
-  }
-  
-  .joke {
-    min-height: 70px;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #cbd5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  button {
-    width: 100%;
-    padding: 0.75rem;
-    border-radius: 14px;
-    border: none;
-    background: linear-gradient(135deg, #38bdf8, #6366f1);
-    color: #020617;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-  
-  button:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-  }
-  
-  button:active {
-    transform: translateY(0);
-  }
-  
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  padding: 1rem;
+}
+
+.joke-card {
+  background: #020617;
+  border-radius: 18px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+.icon {
+  font-size: 2.8rem;
+  color: #a5b4fc;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #38bdf8;
+}
+
+.category-filter {
+  margin-bottom: 1rem;
+}
+
+#categorySelect {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.joke {
+  min-height: 100px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 12px;
+}
+
+.joke-category {
+  margin-bottom: 1.5rem;
+}
+
+#currentCategory {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: #1e293b;
+  color: #a5b4fc;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.rating-container {
+  margin-bottom: 1.5rem;
+  padding: 0.8rem;
+  background: rgba(30, 41, 59, 0.3);
+  border-radius: 12px;
+}
+
+.rating-container p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+
+.stars i {
+  font-size: 1.5rem;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.stars i:hover {
+  color: #fbbf24;
+}
+
+.stars i.active {
+  color: #fbbf24;
+}
+
+.rating-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  min-height: 1.2rem;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #020617;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  font-size: 0.95rem;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.secondary-btn {
+  background: #334155;
+  color: #e5e7eb;
+}
+
+.secondary-btn:hover {
+  background: #475569;
+}
+
+#favoriteBtn.favorited {
+  background: linear-gradient(135deg, #f472b6, #db2777);
+  color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #020617;
+  border-radius: 18px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 70vh;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #38bdf8;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0;
+  width: auto;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: 50vh;
+}
+
+#favoritesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#favoritesList li {
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#favoritesList li:last-child {
+  margin-bottom: 0;
+}
+
+.favorite-joke-text {
+  flex: 1;
+  text-align: left;
+  margin-right: 1rem;
+  font-size: 0.95rem;
+}
+
+.favorite-joke-category {
+  font-size: 0.75rem;
+  color: #a5b4fc;
+  background: #1e293b;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.remove-favorite {
+  background: none;
+  border: none;
+  color: #f87171;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  width: auto;
+  margin-left: 0.5rem;
+}
+
+.remove-favorite:hover {
+  color: #ef4444;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #10b981;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
