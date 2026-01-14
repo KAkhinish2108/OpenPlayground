@@ -1,5 +1,18 @@
 [
   {
+    "title": "Interactive Periodic Table",
+    "category": "educational",
+    "description": "Visually rich representation of chemical elements with color-coding, detailed information, and search functionality.",
+    "tech": [
+        "HTML",
+        "CSS",
+        "JS"
+    ],
+    "link": "./projects/InteractivePeriodicTable/index.html",
+    "icon": "fas fa-atom",
+    "coverClass": "periodic-table-cover"
+  },
+  {
     "title": "Sorting Algorithm Visualizer",
     "category": "Educational",
     "description": "Visualize how different algorithms sort a scrambled dataset with real-time color-coded comparisons and swaps.",
