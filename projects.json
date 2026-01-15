@@ -1051,6 +1051,20 @@
     "coverStyle": "background: #1e1e1e; color: #4ec9b0;"
   },
   {
+    "title": "File Uploader",
+    "category": "utility",
+    "difficulty": "Advanced",
+    "description": "Upload and manage files with drag-and-drop support.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/File-Uploader/index.html",
+    "icon": "ri-add-circle-line",
+    "coverStyle": "background: #6366f1; color: white;"
+  },
+  {
     "title": "Color Code Converter",
     "category": "utility",
     "description": "Convert between HEX, RGB, and HSL.",
