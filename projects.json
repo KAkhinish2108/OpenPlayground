@@ -3363,7 +3363,8 @@
   "link": "./projects/my-stylish-to-do-list/index.html",
   "icon": "ri-todo-fill",
   "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"
-}
+},
+{
     "title": "Chess vs Computer",
     "category": "game",
     "description": "Play classic chess against a strong computer with full rules and clean UI.",
@@ -3484,32 +3485,13 @@
     "coverStyle": "background: linear-gradient(135deg, #fdf2f8 0%, #fbcfe8 50%, #fae8ff 100%); color: #581c87;"
   },
 
-  {
-    "title": "UI As Enemy",
-    "category": "Utility",
-    "difficulty": "Intermediate",
-    "description": "A tactile, book-style minimalist journal with interactive date bookmarks and focus-driven Zen Mode.",
-    "tech": ["HTML", "CSS", "JavaScript", "LocalStorage"],
-    "link": "./projects/micro-journal/index.html",
-    "icon": "ri-book-3-line",
-    "coverStyle": "background: linear-gradient(135deg, #4E342E 0%, #6D4C41 100%); color: #FFFDF8;"
-  },
-  }
-]
-  },
-  {
-  "title": "UI As Enemy",
+{
   "title": "Micro Journal",
-  "category": "utility",
+  "category": "Utility",
   "difficulty": "Intermediate",
   "description": "A tactile, book-style minimalist journal with interactive date bookmarks and focus-driven Zen Mode.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "LocalStorage"
-  ],
-  "link": "./projects/micro journal/index.html",
+  "tech": ["HTML", "CSS", "JavaScript", "LocalStorage"],
+  "link": "./projects/micro-journal/index.html",
   "icon": "ri-book-3-line",
   "coverStyle": "background: linear-gradient(135deg, #4E342E 0%, #6D4C41 100%); color: #FFFDF8;"
 },
@@ -6821,14 +6803,6 @@
   "link": "./projects/carbon-choice-comparator/index.html",
   "icon": "ri-leaf-line",
   "coverStyle": "background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); color: white;"
-}
-
-
-
-]
-  "link": "./projects/Portal_Flip_Puzzle/index.html",
-  "icon": "ri-exchange-box-line",
-  "coverStyle": "background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color:#e5e7eb;"
 },
 {
   "title": "Reflex Pulse",
